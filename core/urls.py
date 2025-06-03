@@ -1,7 +1,5 @@
-from django.urls import path
-from .views import ExpenseListView, IncomeListView
+from django.urls import path, include
 
 urlpatterns = [
-    path('expenses/', ExpenseListView.as_view(), name='expense-list'),
-    path('incomes/',IncomeListView.as_view(), name='incomes-list')
+    path('v1/', include('core.v1.urls')),
 ]
